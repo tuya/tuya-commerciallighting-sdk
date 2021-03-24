@@ -11,7 +11,7 @@ Six core advantages of tuyasmart commercial lighting solutions:
 - Fast growing strong ecosystem
 - Sustainable value added services
 - Digital global project operation management
--Financial grade network data security
+- Financial grade network data security
 ### What is TuyaSmart Commercial Lighting SDK?
 TuyaSmart commercial lighting SDK is an Android solution for commercial lighting. Android developers can quickly develop app functions for commercial lighting and related scenes based on the SDK, and realize the management and control of projects, space and devices.
 ### Technical support
