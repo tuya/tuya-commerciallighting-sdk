@@ -1,30 +1,18 @@
-## 涂鸦商照业务SDK
-
-### 关于涂鸦商照
-
-涂鸦商用照明解决方案是一套完整的物联网控制系统，适用于新装和存量的商用照明市场，为其提供从设备端到软件控制端以及施工端的一套完整方案服务。通过设备管理、能源管控、人因照明等实现绿色建筑与健康建筑。
-
-涂鸦商用照明解决方案为客户后期的产品维护与运营提供数字化、可视化的管理平台，帮助客户实现商业智能化，降低管理成本。
-
-涂鸦商用照明解决方案的六大核心优势：
-
-- 低成本的即开即用方案
-- 丰富的物联能力
-- 快速增长的强大生态系统
-- 可持续的增值服务
-- 数字化全球项目运营管理
-- 金融级网络数据安全
-
-### 关于涂鸦商照SDK
-
-Tuya Smart Commercial Lighting SDK是一套针对商用照明领域开发的Android端解决方案，Android开发者可以基于SDK快速实现商用照明及关联场景的App功能开发，实现对项目、空间以及设备的管理和控制等操作。
-
-### 集成文档
-
-[商照业务SDK提纲](./doc/zh/商照业务SDK提纲.md) 
-
-### 技术支持
-
-- Tuya IoT 开发者平台: https://developer.tuya.com/en/
-- Tuya 开发者帮助中心: https://support.tuya.com/en/help
-- Tuya 工单系统: https://service.console.tuya.com/
+## TuyaSmart Commercial Lighting SDK
+[English](./ReadMe.md)  | [中文文档](./ReadMe-CN.md) 
+### What is TuyaSmart Commercial Lighting?
+TuyaSmart commercial lighting solution is a complete set of IOT control system, which is suitable for the new and existing commercial lighting market, and provides a complete set of solution services from equipment end to software control end and construction end. Green building and healthy building are realized through equipment management, energy management and control, human factor lighting, etc.
+TuyaSmart commercial lighting solutions provide customers with digital and visual management platform for later product maintenance and operation, help customers realize business intelligence and reduce management costs.
+Six core advantages of tuyasmart commercial lighting solutions:
+-Low cost out of the box solution
+-Rich IOT capabilities
+-Fast growing strong ecosystem
+-Sustainable value added services
+-Digital global project operation management
+-Financial grade network data security
+### What is TuyaSmart Commercial Lighting SDK?
+TuyaSmart commercial lighting SDK is an Android solution for commercial lighting. Android developers can quickly develop app functions for commercial lighting and related scenes based on the SDK, and realize the management and control of projects, space and devices.
+###Technical support
+-Tuya IOT Developer Platform: https://developer.tuya.com/en/
+-Tuya developer help center: https://support.tuya.com/en/help
+-Tuya work order system: https://service.console.tuya.com/
