@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!-- SwipeRefreshLayout -->
+    <color name="background_home">#F0F0F0</color>
+    <color name="textColor">#303030</color>
+
+
+    <color name="default_bg">#f0f0f0</color>
+    <color name="transparent">#00000000</color>
+    <color name="line_color">#ffdbdbdb</color>
+    <color name="line">#dbdbdb</color>
+    <color name="colorNormal">#626262</color>
+    <color name="edit_exit_title">#FF9B9B9B</color>
+    <color name="colorHighlight">#FF5800</color>
+
+    <color name="color_accent">#ffffa748</color>
+    <color name="text_hint_color">#9b9b9b</color>
+    <color name="text_color">#303030</color>
+    <color name="text_color1">#626262</color>
+    <color name="text_color2">#9b9b9b</color>
+
+    <color name="black">#ff000000</color>
+    <color name="color_626262">#626262</color>
+    <color name="color_d0e1fd">#d0e1fd</color>
+    <color name="color_979797">#979797</color>
+
+    <color name="at_circleprogress_bg">#4c1CC9F4</color>
+    <color name="gray">#ffaaaaaa</color>
+    <color name="gray_70">#B3adb1b6</color>
+    <color name="gray_30">#4Cadb1b6</color>
+    <color name="gray_99">#999999</color>
+
+    <color name="white">#ffffffff</color>
+
+    <color name="orange">#ffffa748</color>
+
+    <color name="red">#FF0000</color>
+
+    <color name="orange_58">#ff5800</color>
+
+    <!-- SwipeRefreshLayout -->
+    <color name="google_red">#d62d20</color>
+    <color name="google_blue">#0057e7</color>
+    <color name="google_green">#008744</color>
+    <color name="google_yellow">#ffa700</color>
+    <color name="line_grey">#9b9b9b</color>
+    <color name="bottom_dialog_title_color">#9b9b9b</color>
+    <color name="edittext_textcolor">#626262</color>
+
+    <color name="color_primary">#F8F8F8</color>
+    <color name="status_system_bg_color">#303030</color>
+    <color name="colorDark">#303030</color>
+
+    <color name="color_CC4600">#cc4600</color>
+    <color name="color_bdbdbd">#bdbdbd</color>
+    <color name="color_303030">#303030</color>
+    <color name="color_dddddd">#dddddd</color>
+</resources>
