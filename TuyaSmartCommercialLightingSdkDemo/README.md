@@ -36,8 +36,6 @@ You can choose the required options according to your actual needs, support mult
 
 ​		:::
 
-> Note: After ioT background **Create App** successfully, please provide the package name of the created application to our business developer, and he will forward the relevant information to the cloud department for the creation of customer projects and other related supporting operations before the **SDK can be used properly**!
-
 ## SDK Integration 
 
 - Before you start, please make sure you have completed the [Preparation](https://developer.tuya.com/cn/docs/app-development/preparation?id=Ka69nt983bhh5).
