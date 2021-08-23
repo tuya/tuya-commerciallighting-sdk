@@ -200,22 +200,22 @@ public class GroupListFragment : BaseFragment(), IGroupListView {
 
         var content = activity?.getString(R.string.group_no_device)
         FamilyDialogUtils.showConfirmAndCancelDialog(activity,
-                if (dismissGroup) requireActivity().resources.getString(R.string.group_dismiss) else "",
-                content,
-                if (dismissGroup) requireActivity().resources.getString(R.string.group_dismiss) else requireActivity().resources.getString(R.string.ty_confirm),
-                if (dismissGroup) requireContext().resources.getString(R.string.ty_cancel) else "", true,
-                object : BooleanConfirmAndCancelListener {
-                    override fun onCancel(o: Any?): Boolean {
-                        return true
-                    }
+            if (dismissGroup) requireActivity().resources.getString(R.string.group_dismiss) else "",
+            content,
+            if (dismissGroup) requireActivity().resources.getString(R.string.group_dismiss) else requireActivity().resources.getString(R.string.ty_confirm),
+            if (dismissGroup) requireContext().resources.getString(R.string.ty_cancel) else "", true,
+            object : BooleanConfirmAndCancelListener {
+                override fun onCancel(o: Any?): Boolean {
+                    return true
+                }
 
-                    override fun onConfirm(o: Any?): Boolean {
-                        if (dismissGroup) {
-                            groupBean?.groupPackBean?.groupPackageId?.let { grouListPresenter.dismissGroupPack(it) };
-                        }
-                        return true
+                override fun onConfirm(o: Any?): Boolean {
+                    if (dismissGroup) {
+                        groupBean?.groupPackBean?.groupPackageId?.let { grouListPresenter.dismissGroupPack(it) };
                     }
-                });
+                    return true
+                }
+            });
     }
 
     override fun showGroupPackControlDialog(areaBeanWrapper: GroupPackBeanWrapper?) {

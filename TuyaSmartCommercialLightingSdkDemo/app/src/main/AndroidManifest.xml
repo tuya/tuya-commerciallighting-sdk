@@ -7,7 +7,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission
         android:name="android.permission.READ_PHONE_STATE"
-        android:required="false" /> <!-- 网络 -->
+        android:required="false" /> 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
@@ -39,7 +39,7 @@
         <activity
             android:name="com.tuya.smart.commercial.lighting.demo.pages.config.view.SigMeshConfigActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Splash.Theme"
+
             android:windowSoftInputMode="adjustPan|stateHidden" />
 
         <meta-data
@@ -61,22 +61,22 @@
         <activity
             android:name="com.tuya.smart.commercial.lighting.demo.pages.device.view.DeviceListActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Splash.Theme"
+
             android:windowSoftInputMode="adjustPan|stateHidden" />
         <activity
             android:name="com.tuya.smart.commercial.lighting.demo.pages.device.view.CommonDeviceDebugActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Splash.Theme"
+
             android:windowSoftInputMode="adjustPan|stateHidden" />
         <activity
             android:name="com.tuya.smart.commercial.lighting.demo.pages.login.view.CountryListActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Splash.Theme"
+
             android:windowSoftInputMode="adjustPan|stateHidden" />
         <activity
             android:name="com.tuya.smart.commercial.lighting.demo.pages.login.view.LoginActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Splash.Theme"
+
             android:windowSoftInputMode="adjustPan|stateHidden" />
         <activity
             android:name="com.tuya.smart.commercial.lighting.demo.pages.login.view.LoginWithUidActivity"
@@ -85,17 +85,17 @@
         <activity
             android:name="com.tuya.smart.commercial.lighting.demo.pages.login.view.LoginWithPhoneActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Splash.Theme"
+
             android:windowSoftInputMode="adjustPan|stateHidden" />
         <activity
             android:name="com.tuya.smart.commercial.lighting.demo.pages.login.view.AccountInputActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Splash.Theme"
+
             android:windowSoftInputMode="adjustPan|stateHidden" />
         <activity
             android:name="com.tuya.smart.commercial.lighting.demo.pages.login.view.AccountConfirmActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Splash.Theme"
+
             android:windowSoftInputMode="adjustPan|stateHidden" />
         <activity
             android:name="com.tuya.smart.commercial.lighting.demo.pages.LauncherActivity"
@@ -104,89 +104,87 @@
         <activity
             android:name="com.tuya.smart.commercial.lighting.demo.pages.config.view.ECBindActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Splash.Theme"
+
             android:windowSoftInputMode="adjustPan|stateHidden" />
         <activity
             android:name="com.tuya.smart.commercial.lighting.demo.pages.config.view.AddDeviceAPTipActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Splash.Theme"
+
             android:windowSoftInputMode="adjustPan|stateHidden" />
         <activity
             android:name="com.tuya.smart.commercial.lighting.demo.pages.config.view.ECFailedActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Splash.Theme"
+
             android:windowSoftInputMode="adjustPan|stateHidden" />
         <activity
             android:name="com.tuya.smart.commercial.lighting.demo.pages.config.view.ECActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Splash.Theme"
+
             android:windowSoftInputMode="adjustPan|stateHidden" />
         <activity
             android:name="com.tuya.smart.commercial.lighting.demo.pages.config.view.AddDeviceTipActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Splash.Theme"
+
             android:windowSoftInputMode="adjustPan|stateHidden" />
         <activity
             android:name="com.tuya.smart.commercial.lighting.demo.pages.BrowserActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Splash.Theme"
+
             android:windowSoftInputMode="adjustPan|stateHidden" />
         <activity
             android:name="com.tuya.smart.commercial.lighting.demo.pages.device.view.DeviceCommonActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/ToolrTheme"
             android:windowSoftInputMode="adjustPan|stateHidden" />
         <activity
             android:name="com.tuya.smart.commercial.lighting.demo.pages.device.view.DpSendActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/ToolrTheme"
             android:windowSoftInputMode="adjustPan|stateHidden" />
         <activity
             android:name="com.tuya.smart.commercial.lighting.demo.pages.config.view.AddDeviceTypeActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Splash.Theme"
+
             android:windowSoftInputMode="adjustPan|stateHidden" />
         <activity
             android:name="com.tuya.smart.commercial.lighting.demo.pages.config.view.ZigbeeConfigActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Splash.Theme"
+
             android:windowSoftInputMode="adjustPan|stateHidden" />
         <activity
             android:name="com.tuya.smart.commercial.lighting.demo.pages.area.view.AreaIndexActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Default_Public_Theme" />
+             />
         <activity
             android:name="com.tuya.smart.commercial.lighting.demo.pages.area.view.AreaControlActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Default_Public_Theme" />
+             />
         <activity
             android:name="com.tuya.smart.commercial.lighting.demo.pages.project.view.ProjectIndexActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Default_Public_Theme" />
+             />
         <activity
             android:name="com.tuya.smart.commercial.lighting.demo.pages.project.view.ProjectAddActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Default_Public_Theme" />
+             />
         <activity
             android:name="com.tuya.smart.commercial.lighting.demo.pages.project.view.ProjectEmptyActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Default_Public_Theme" />
+             />
         <activity
             android:name="com.tuya.smart.commercial.lighting.demo.pages.project.view.ProjectInfoActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Default_Public_Theme" />
+             />
         <activity
             android:name="com.tuya.smart.commercial.lighting.demo.pages.area.view.AreaInfoActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Default_Public_Theme" />
+             />
         <activity
             android:name="com.tuya.smart.commercial.lighting.demo.pages.area.view.GroupListActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Default_Public_Theme" />
+             />
         <activity
             android:name="com.tuya.smart.commercial.lighting.demo.pages.group.view.GroupDeviceListActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Default_Public_Theme" />
+             />
     </application>
 
 </manifest>

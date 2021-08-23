@@ -25,10 +25,14 @@
 
 4. 点击**获取密钥**，获取 SDK 的 AppKey，AppSecret，安全图片等信息。
 
-	![创建 App SDK.png](https://airtake-public-data-1254153901.cos.ap-shanghai.myqcloud.com/content-platform/hestia/16243559796b9b9be81e9.png)
+	![image.png](https://airtake-public-data-1254153901.cos.ap-shanghai.myqcloud.com/content-platform/hestia/1629354107c0dedbc5e3a.png)
 
 	:::important
-	IoT 平台 **创建App** 成功后，请将创建的应用的包名提供到我司商务，并由商务转交相关信息给云端进行客户项目的创建等相关配套操作后，**SDK才可正常使用**。
+	
+	1. IoT 平台 **创建App** 成功后，请将创建的应用的包名提供到我司商务，并由商务转交相关信息给云端进行客户项目的创建等相关配套操作后，**SDK才可正常使用**。
+	
+	2. 从1.9.7版本开始，需要设置SHA256。关于如何获取SHA256密钥，可以参考文档[如何获取SHA256密钥](https://developer.tuya.com/cn/docs/app-development/iot_app_sdk_core_sha1?id=Kao7c7b139vrh)。
+	
 	:::
 
 ## 集成SDK
@@ -62,7 +66,7 @@ dependencies {
     implementation 'com.squareup.okhttp3:okhttp-urlconnection:3.12.3'
     implementation "androidx.annotation:annotation:1.0.0"
 
-    implementation "com.tuya.smart:tuyasmart-tuyacommerciallightingsdk:1.9.6"
+    implementation "com.tuya.smart:tuyasmart-tuyacommerciallightingsdk:1.9.7"
 }
 ```
 

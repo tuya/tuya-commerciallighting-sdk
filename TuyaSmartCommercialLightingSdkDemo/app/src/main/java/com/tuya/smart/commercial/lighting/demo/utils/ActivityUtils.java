@@ -26,25 +26,23 @@ package com.tuya.smart.commercial.lighting.demo.utils;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.res.TypedArray;
-import android.util.Log;
+import android.widget.Toast;
 
-import com.alibaba.fastjson.JSON;
 import com.tuya.sdk.os.lighting.TuyaCommercialLightingArea;
-import com.tuya.smart.activator.config.api.ITuyaDeviceActiveListener;
-import com.tuya.smart.activator.config.api.TuyaDeviceActivatorImpl;
-import com.tuya.smart.activator.config.api.TuyaDeviceActivatorManager;
 import com.tuya.smart.android.common.utils.TuyaUtil;
 import com.tuya.smart.android.demo.R;
+import com.tuya.smart.commercial.lighting.demo.app.IntentExtra;
+import com.tuya.smart.commercial.lighting.demo.pages.BrowserActivity;
 import com.tuya.smart.commercial.lighting.demo.pages.LauncherActivity;
 import com.tuya.smart.commercial.lighting.demo.pages.area.view.AreaIndexActivity;
-import com.tuya.smart.commercial.lighting.demo.pages.BrowserActivity;
-import com.tuya.smart.commercial.lighting.demo.app.IntentExtra;
-import com.tuya.smart.commercial.lighting.demo.pages.config.view.AddDeviceTypeActivity;
 import com.tuya.smart.commercial.lighting.demo.pages.config.CommonConfig;
+import com.tuya.smart.commercial.lighting.demo.pages.config.view.AddDeviceTypeActivity;
 import com.tuya.smart.commercial.lighting.demo.pages.project.view.ProjectIndexActivity;
+import com.tuya.smart.commercial.lighting.demo.pages.project.view.RegionListActivity;
+import com.tuya.smart.deviceconfig.api.ITuyaDeviceActiveListener;
+import com.tuya.smart.deviceconfig.api.TuyaDeviceActivatorManager;
 import com.tuya.smart.lighting.sdk.bean.TransferResultSummary;
 import com.tuya.smart.lighting.sdk.impl.DefaultDeviceTransferListener;
-import com.tuya.smart.commercial.lighting.demo.pages.project.view.RegionListActivity;
 import com.tuya.smart.sdk.TuyaSdk;
 
 import java.util.List;
@@ -170,23 +168,27 @@ public class ActivityUtils {
 
     public static void gotoActivatorActivity(Activity context, long projectId, long areaId) {
 //        TuyaDeviceActivatorManager.startDeviceActiveAction(context, TuyaDeviceActivatorImpl.getInstance().getCurrentHomeId());
-        TuyaDeviceActivatorManager.startDeviceActiveAction(context, projectId);
-        TuyaDeviceActivatorManager.setListener(new ITuyaDeviceActiveListener() {
+
+//        TuyaDeviceActivatorManager.startDeviceActiveAction(context, TuyaDeviceActivatorImpl.getInstance().getCurrentHomeId(), new ITuyaDeviceActiveListener() {
+        TuyaDeviceActivatorManager.startDeviceActiveAction(context, projectId, new ITuyaDeviceActiveListener() {
             @Override
             public void onDevicesAdd(List<String> list) {
-                Log.e(TAG, "onDevicesAdd:" + JSON.toJSONString(list));
+                StringBuilder str = new StringBuilder();
+                for (String id: list) {
+                    str.append("add device success, id: " + id).append("\n");
+                }
 
                 putDevicesInArea(context, projectId, areaId, list);
             }
 
             @Override
             public void onRoomDataUpdate() {
-
+                Toast.makeText(context, "please refresh room data", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onOpenDevicePanel(String s) {
-
+                Toast.makeText(context, "u can open the panel of the device: " + s, Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -194,6 +196,31 @@ public class ActivityUtils {
 
             }
         });
+
+//        TuyaDeviceActivatorManager.startDeviceActiveAction(context, projectId);
+//        TuyaDeviceActivatorManager.setListener(new ITuyaDeviceActiveListener() {
+//            @Override
+//            public void onDevicesAdd(List<String> list) {
+//                Log.e(TAG, "onDevicesAdd:" + JSON.toJSONString(list));
+//
+//                putDevicesInArea(context, projectId, areaId, list);
+//            }
+//
+//            @Override
+//            public void onRoomDataUpdate() {
+//
+//            }
+//
+//            @Override
+//            public void onOpenDevicePanel(String s) {
+//
+//            }
+//
+//            @Override
+//            public void onExitConfigBiz() {
+//
+//            }
+//        });
 //        Intent intent = new Intent(context, AddDeviceTypeActivity.class);
 //        intent.putExtra(IntentExtra.KEY_PROJECT_ID, projectId);
 //        intent.putExtra(IntentExtra.KEY_AREA_ID, areaId);
