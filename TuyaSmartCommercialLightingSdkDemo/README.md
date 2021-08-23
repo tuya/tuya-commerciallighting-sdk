@@ -67,7 +67,7 @@ dependencies {
     implementation 'com.squareup.okhttp3:okhttp-urlconnection:3.12.3'
     implementation "androidx.annotation:annotation:1.0.0"
 
-    implementation "com.tuya.smart:tuyasmart-tuyacommerciallightingsdk:1.9.6"
+    implementation "com.tuya.smart:tuyasmart-tuyacommerciallightingsdk:1.9.7"
 }
 ```
 
