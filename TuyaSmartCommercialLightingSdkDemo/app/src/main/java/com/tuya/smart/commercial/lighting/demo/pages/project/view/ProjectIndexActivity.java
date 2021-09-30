@@ -27,14 +27,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.alibaba.fastjson.JSONObject;
-import com.tuya.sdk.tuyamesh.utils.ArraysUtils;
 import com.tuya.smart.android.demo.R;
 import com.tuya.smart.api.service.MicroServiceManager;
 import com.tuya.smart.commercial.lighting.demo.app.IntentExtra;
@@ -52,9 +49,7 @@ import com.tuya.smart.commonbiz.bizbundle.family.api.AbsBizBundleFamilyService;
 import com.tuya.smart.home.sdk.bean.HomeBean;
 import com.tuya.smart.lighting.sdk.bean.LightingProjectConfigsBean;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import butterknife.BindView;

@@ -32,9 +32,11 @@ You can choose the required options according to your actual needs, support mult
   :::important
   
   	1. After ioT background **Create App** successfully, please provide the package name of the created application to our business developer, and he will forward the relevant information to the cloud department for the creation of customer projects and other related supporting operations before the **SDK can be used properly**!
-   	2. From version 1.9.7 , you need to set SHA256 before you can use it. How to get SHA256 key, you can refer to the document [How to get SHA256 key](https://developer.tuya.com/en/docs/app-development/iot_app_sdk_core_sha1?id=Kao7c7b139vrh).
+  	2. From version 1.9.7 , you need to set SHA256 before you can use it. How to get SHA256 key, you can refer to the document [How to get SHA256 key](https://developer.tuya.com/en/docs/app-development/iot_app_sdk_core_sha1?id=Kao7c7b139vrh).
 
 ​		:::
+
+> Note: After ioT background **Create App** successfully, please provide the package name of the created application to our business developer, and he will forward the relevant information to the cloud department for the creation of customer projects and other related supporting operations before the **SDK can be used properly**!
 
 ## SDK Integration 
 
@@ -67,7 +69,7 @@ dependencies {
     implementation 'com.squareup.okhttp3:okhttp-urlconnection:3.12.3'
     implementation "androidx.annotation:annotation:1.0.0"
 
-    implementation "com.tuya.smart:tuyasmart-tuyacommerciallightingsdk:1.9.7"
+    implementation "com.tuya.smart:tuyasmart-tuyacommerciallightingsdk:1.11.3"
 }
 ```
 
