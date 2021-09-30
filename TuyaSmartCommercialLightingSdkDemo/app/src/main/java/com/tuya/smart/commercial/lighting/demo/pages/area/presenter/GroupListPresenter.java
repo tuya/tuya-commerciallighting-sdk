@@ -27,7 +27,6 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
-import android.text.TextUtils;
 
 import com.tuya.sdk.core.PluginManager;
 import com.tuya.sdk.home.cache.TuyaHomeRelationCacheManager;
@@ -37,25 +36,20 @@ import com.tuya.smart.android.demo.R;
 import com.tuya.smart.api.service.MicroServiceManager;
 import com.tuya.smart.commercial.lighting.demo.bean.GroupPackBeanWrapper;
 import com.tuya.smart.commercial.lighting.demo.pages.area.view.IGroupListView;
-import com.tuya.smart.commonbiz.api.OnDeviceServiceListener;
 import com.tuya.smart.commonbiz.api.family.AbsFamilyService;
 import com.tuya.smart.home.sdk.TuyaHomeSdk;
 import com.tuya.smart.home.sdk.callback.ITuyaResultCallback;
 import com.tuya.smart.interior.api.ITuyaDevicePlugin;
 import com.tuya.smart.interior.api.ITuyaGroupPlugin;
-import com.tuya.smart.interior.api.ITuyaHomePlugin;
 import com.tuya.smart.interior.device.ITuyaDeviceDataCacheManager;
 import com.tuya.smart.lighting.sdk.TuyaLightingKitSDK;
 import com.tuya.smart.lighting.sdk.api.ILightingGroupPackDpsManager;
 import com.tuya.smart.lighting.sdk.api.ILightingGroupPackListener;
-import com.tuya.smart.lighting.sdk.area.LightingGroupManager;
 import com.tuya.smart.lighting.sdk.bean.GroupPackBean;
 import com.tuya.smart.lighting.sdk.bean.GroupPackListBean;
-import com.tuya.smart.lighting.sdk.identity.IdentityCacheManager;
 import com.tuya.smart.lighting.sdk.impl.DefaultGroupChangeObserver;
 import com.tuya.smart.sdk.api.IResultCallback;
 import com.tuya.smart.sdk.api.ITuyaDataCallback;
-import com.tuya.smart.sdk.bean.DeviceBean;
 import com.tuya.smart.sdk.bean.GroupBean;
 
 import org.jetbrains.annotations.NotNull;
@@ -115,12 +109,14 @@ public class GroupListPresenter {
         mCurrentProjectId = mAbsFamilyService.getCurrentHomeId();
         mDevicePlugin = PluginManager.service(ITuyaDevicePlugin.class);
         mDataCacheManager = mDevicePlugin.newTuyaDeviceDataCacheManager();
-        LightingGroupManager.getInstance().registerObserver(groupChangeObserver);
-        TuyaLightingKitSDK.getInstance().getGroupPackManager().registerGroupPackListener(groupPackListener);
+        TuyaCommercialLightingGroupPack.getGroupManager().registerObserver(groupChangeObserver);
+        TuyaCommercialLightingGroupPack.getGroupPackManager().registerGroupPackListener(groupPackListener);
+
+
     }
 
     public void queryGroupInfo(long groupId) {
-        LightingGroupManager.getInstance().getGroupInfo(mCurrentProjectId, groupId, new ITuyaResultCallback<GroupBean>() {
+        TuyaCommercialLightingGroupPack.getGroupManager().getGroupInfo(mCurrentProjectId, groupId, new ITuyaResultCallback<GroupBean>() {
             @Override
             public void onSuccess(GroupBean result) {
 //                mGroupListView.refreshGroupItem(result);
@@ -236,7 +232,7 @@ public class GroupListPresenter {
             return;
         }
 
-        if (groupBean.getGroupPackBean().getDeviceNum() <= 0 && !IdentityCacheManager.getInstance().isContainsCode("GROUP_SUB_DEL")) {
+        if (groupBean.getGroupPackBean().getDeviceNum() <= 0) {
             mGroupListView.showEmptyGroupDialog(groupBean, false);
             return;
         }
@@ -305,7 +301,7 @@ public class GroupListPresenter {
     }
 
     public void onDestroy() {
-        LightingGroupManager.getInstance().unregisterObserver(groupChangeObserver);
+        TuyaCommercialLightingGroupPack.getGroupManager().unregisterObserver(groupChangeObserver);
         mHandler.removeCallbacksAndMessages(null);
     }
 

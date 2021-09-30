@@ -58,7 +58,7 @@ public class PackedGroupListPresenter implements IPackedGroupDeviceListPresenter
 
     @Override
     public void createPackedGroup(String packedGroupName, List<ComplexDeviceBean> deviceBeans) {
-        TuyaCommercialLightingGroupPack.getGroupPackManager().createPackedGroup(mProjectId, mAreaId, packedGroupName, deviceBeans, "zm", new DefaultDeviceTransferListener() {
+        TuyaCommercialLightingGroupPack.getGroupPackManager().createPackedGroup(mProjectId, mAreaId, packedGroupName, deviceBeans, "zm","", new DefaultDeviceTransferListener() {
             @Override
             public void handleResult(TransferResultSummary transferResultSummary) {
                 mView.toast("Create Packed group finished");

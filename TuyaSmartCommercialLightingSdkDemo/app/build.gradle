@@ -6,12 +6,17 @@ apply plugin: 'kotlin-android-extensions'
 
 android {
     signingConfigs {
-        
+        debug {
+            storeFile file('')
+            storePassword ''
+            keyAlias ''
+            keyPassword ''
+        }
     }
     compileSdkVersion 29
     buildToolsVersion "28.0.3"
     defaultConfig {
-        applicationId "com.lighting.demo"
+        applicationId ""
         minSdkVersion 19
         targetSdkVersion 29
         versionCode 1
@@ -54,10 +59,12 @@ android {
     buildTypes {
         debug {
             minifyEnabled false
+            signingConfig signingConfigs.debug
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         release{
             minifyEnabled false
+            signingConfig signingConfigs.debug
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -106,14 +113,21 @@ android {
         implementation 'androidx.appcompat:appcompat:1.2.0'
         implementation "androidx.annotation:annotation:1.0.0"
 
-        implementation "com.tuya.smart:tuyasmart-tuyacommerciallightingsdk:1.9.7"
+        implementation "com.tuya.smart:tuyasmart-tuyacommerciallightingsdk:1.11.3"
         /*================================SDK====================================*/
 
+        implementation("com.tuya.smart:tuyasmart-bluemesh:1.11.0-cl-1") {
+            force = true
+        }
+
         //UI biz bundle for device control
-        implementation 'com.tuya.smart:tuyasmart-bizbundle-panel:3.22.0-9'
+        implementation 'com.tuya.smart:tuyasmart-bizbundle-panel:3.27.5-4'
+        api 'com.tuya.smart:tuyasmart-react-native-amap:3.27.5'
+        implementation 'com.amap.api:search:7.7.0'
+        implementation 'com.amap.api:3dmap:7.8.0'
 
         // UI biz bundle for device activation
-        implementation 'com.tuya.smart:tuyasmart-bizbundle-device_activator:3.22.0-9'
+        implementation 'com.tuya.smart:tuyasmart-bizbundle-device_activator:3.27.5-4'
 
         implementation "com.tuya.smart:tuyasmart-base-constant:3.21.0-rc.1"
 
