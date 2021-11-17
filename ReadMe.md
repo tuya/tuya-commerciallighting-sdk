@@ -1,5 +1,7 @@
 ## TuyaSmart Commercial Lighting SDK
-[English](./README.md)  | [中文文档](./README-zh.md) 
+
+[English](./ReadMe.md)  | [中文文档](./README-zh.md) 
+
 ### What is TuyaSmart Commercial Lighting?
 TuyaSmart commercial lighting solution is a complete set of IOT control system, which is suitable for the new and existing commercial lighting market, and provides a complete set of solution services from equipment end to software control end and construction end. Green building and healthy building are realized through equipment management, energy management and control, human factor lighting, etc.
 TuyaSmart commercial lighting solutions provide customers with digital and visual management platform for later product maintenance and operation, help customers realize business intelligence and reduce management costs.
