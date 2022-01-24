@@ -24,24 +24,20 @@
 package com.tuya.smart.commercial.lighting.demo.app;
 
 
-import com.tuya.smart.commonbiz.bizbundle.family.api.AbsBizBundleFamilyService;
+import com.tuya.commerciallighting.commonbiz.bizbundle.project.api.AbsBizBundleProjectService;
 
-public class BizBundleProjectServiceImpl extends AbsBizBundleFamilyService {
+public class BizBundleProjectServiceImpl extends AbsBizBundleProjectService {
 
     private long mProjectId;
 
     @Override
-    public long getCurrentHomeId() {
+    public void shiftCurrentProject(long projectId, String curName) {
+        super.shiftCurrentProject(projectId, curName);
+        mProjectId = projectId;
+    }
+
+    @Override
+    public long getCurrentProjectId() {
         return mProjectId;
-    }
-
-    @Override
-    public void setCurrentHomeId(long homeId) {
-        mProjectId = homeId;
-    }
-
-    @Override
-    public void shiftCurrentFamily(long projectId, String s) {
-        this.mProjectId = projectId;
     }
 }

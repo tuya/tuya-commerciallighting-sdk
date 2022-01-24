@@ -32,6 +32,7 @@ import android.util.Log;
 import androidx.multidex.MultiDexApplication;
 
 import com.facebook.drawee.backends.pipeline.Fresco;
+import com.tuya.commerciallighting.commonbiz.bizbundle.project.api.AbsBizBundleProjectService;
 import com.tuya.smart.android.common.utils.L;
 import com.tuya.smart.api.MicroContext;
 import com.tuya.smart.api.router.UrlBuilder;
@@ -39,7 +40,6 @@ import com.tuya.smart.api.service.RedirectService;
 import com.tuya.smart.api.service.RouteEventListener;
 import com.tuya.smart.api.service.ServiceEventListener;
 import com.tuya.smart.commercial.lighting.demo.pages.login.view.LoginWithUidActivity;
-import com.tuya.smart.commonbiz.bizbundle.family.api.AbsBizBundleFamilyService;
 import com.tuya.smart.optimus.sdk.TuyaOptimusSdk;
 import com.tuya.smart.sdk.TuyaSdk;
 import com.tuya.smart.sdk.api.INeedLoginListener;
@@ -89,7 +89,7 @@ public class TuyaSmartApp extends MultiDexApplication {
         });
         TuyaOptimusSdk.init(this);
 
-        TuyaWrapper.registerService(AbsBizBundleFamilyService.class, new BizBundleProjectServiceImpl());
+        TuyaWrapper.registerService(AbsBizBundleProjectService.class, new BizBundleProjectServiceImpl());
         RedirectService service = MicroContext.getServiceManager().findServiceByInterface(RedirectService.class.getName());
         service.registerUrlInterceptor(new RedirectService.UrlInterceptor() {
             @Override

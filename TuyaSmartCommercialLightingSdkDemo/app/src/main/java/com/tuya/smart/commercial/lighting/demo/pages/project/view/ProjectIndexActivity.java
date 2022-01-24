@@ -32,6 +32,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.alibaba.fastjson.JSONObject;
+import com.tuya.commerciallighting.commonbiz.bizbundle.project.api.AbsBizBundleProjectService;
 import com.tuya.smart.android.demo.R;
 import com.tuya.smart.api.service.MicroServiceManager;
 import com.tuya.smart.commercial.lighting.demo.app.IntentExtra;
@@ -45,7 +46,6 @@ import com.tuya.smart.commercial.lighting.demo.utils.CollectionUtils;
 import com.tuya.smart.commercial.lighting.demo.utils.DialogUtil;
 import com.tuya.smart.commercial.lighting.demo.utils.ToastUtil;
 import com.tuya.smart.commercial.lighting.demo.widget.recyclerview.adapter.BaseRVAdapter;
-import com.tuya.smart.commonbiz.bizbundle.family.api.AbsBizBundleFamilyService;
 import com.tuya.smart.home.sdk.bean.HomeBean;
 import com.tuya.smart.lighting.sdk.bean.LightingProjectConfigsBean;
 
@@ -80,7 +80,7 @@ public class ProjectIndexActivity extends BaseActivity implements IProjectIndexV
     }
 
     private void initListener() {
-        mAdapter.setOnItemViewClickListener((item, sectionKey, sectionItemPosition) -> routeInfoActivity(item.getData().getHomeId()));
+        mAdapter.setOnItemViewClickListener((item, sectionKey, sectionItemPosition) -> routeInfoActivity(item.getData()));
     }
 
     private void initAdapter() {
@@ -104,9 +104,11 @@ public class ProjectIndexActivity extends BaseActivity implements IProjectIndexV
         mPresenter.getProjectTypeList();
     }
 
-    private void routeInfoActivity(long projectId) {
-        AbsBizBundleFamilyService service = MicroServiceManager.getInstance().findServiceByInterface(AbsBizBundleFamilyService.class.getName());
-        service.setCurrentHomeId(projectId);
+    private void routeInfoActivity(HomeBean data) {
+        if (null == data) return;
+        long projectId = data.getHomeId();
+        AbsBizBundleProjectService service = MicroServiceManager.getInstance().findServiceByInterface(AbsBizBundleProjectService.class.getName());
+        service.shiftCurrentProject(projectId, data.getName());
 
         Intent intent = new Intent(this, ProjectInfoActivity.class);
         intent.putExtra(IntentExtra.KEY_PROJECT_ID, projectId);

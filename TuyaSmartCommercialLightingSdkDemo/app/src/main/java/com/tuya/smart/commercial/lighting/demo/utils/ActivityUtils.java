@@ -204,10 +204,6 @@ public class ActivityUtils {
                 Toast.makeText(context, "u can open the panel of the device: " + s, Toast.LENGTH_SHORT).show();
             }
 
-            @Override
-            public void onExitConfigBiz() {
-                L.i(TAG, "onExitConfigBiz");
-            }
         });
     }
 
