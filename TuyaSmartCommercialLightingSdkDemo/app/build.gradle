@@ -116,18 +116,15 @@ android {
         implementation "com.tuya.smart:tuyacommerciallightingsdk:1.11.3"
         /*================================SDK====================================*/
 
-        implementation("com.tuya.smart:tuyasmart-bluemesh:1.11.0-cl-1") {
-            force = true
-        }
-
         //UI biz bundle for device control
-        implementation 'com.tuya.smart:tuyasmart-bizbundle-panel:3.27.5-4'
+        implementation 'com.tuya.smart:tuyasmart-commercial-lighting-bizbundle-panel:1.11.3-5'
+
         api 'com.tuya.smart:tuyasmart-react-native-amap:3.27.5'
         implementation 'com.amap.api:search:7.7.0'
         implementation 'com.amap.api:3dmap:7.8.0'
 
         // UI biz bundle for device activation
-        implementation 'com.tuya.smart:tuyasmart-bizbundle-device_activator:3.27.5-4'
+        implementation 'com.tuya.smart:tuyasmart-commercial-lighting-bizbundle-device_activator:1.11.3-5'
 
         implementation "com.tuya.smart:tuyasmart-base-constant:3.21.0-rc.1"
 

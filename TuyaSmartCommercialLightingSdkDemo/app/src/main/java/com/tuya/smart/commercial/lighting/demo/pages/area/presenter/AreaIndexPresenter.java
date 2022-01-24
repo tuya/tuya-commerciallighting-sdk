@@ -24,7 +24,6 @@
 package com.tuya.smart.commercial.lighting.demo.pages.area.presenter;
 
 
-import com.tuya.sdk.os.TuyaOSDevice;
 import com.tuya.smart.android.mvp.presenter.BasePresenter;
 import com.tuya.smart.commercial.lighting.demo.pages.area.model.AreaAddModel;
 import com.tuya.smart.commercial.lighting.demo.pages.area.model.AreaIndexModel;
@@ -36,9 +35,7 @@ import com.tuya.smart.home.sdk.callback.ITuyaResultCallback;
 import com.tuya.smart.lighting.sdk.area.bean.AreaListInProjectResponse;
 import com.tuya.smart.lighting.sdk.bean.AreaBean;
 import com.tuya.smart.lighting.sdk.bean.AreaConfig;
-import com.tuya.smart.sdk.api.IResultCallback;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class AreaIndexPresenter extends BasePresenter {
