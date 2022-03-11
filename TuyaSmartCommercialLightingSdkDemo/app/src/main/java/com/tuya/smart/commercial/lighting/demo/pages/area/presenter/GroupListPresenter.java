@@ -42,6 +42,7 @@ import com.tuya.smart.home.sdk.callback.ITuyaResultCallback;
 import com.tuya.smart.interior.api.ITuyaDevicePlugin;
 import com.tuya.smart.interior.api.ITuyaGroupPlugin;
 import com.tuya.smart.interior.device.ITuyaDeviceDataCacheManager;
+import com.tuya.smart.interior.device.bean.GroupRespBean;
 import com.tuya.smart.lighting.sdk.TuyaLightingKitSDK;
 import com.tuya.smart.lighting.sdk.api.ILightingGroupPackDpsManager;
 import com.tuya.smart.lighting.sdk.api.ILightingGroupPackListener;
@@ -251,13 +252,11 @@ public class GroupListPresenter {
                                     || groupBean.getGroupPackBean().getJoinedGroups().size() <= 0) {
                                 return;
                             }
-                            final GroupBean firstGroup = groupBean.getGroupPackBean().getJoinedGroups().get(0);
-                            mDataCacheManager.getGroup(mCurrentProjectId, firstGroup.getId(),
+                            final GroupRespBean firstGroup = groupBean.getGroupPackBean().getJoinedGroups().get(0);
+                            mDataCacheManager.getGroup(firstGroup.getId(),
                                     new ITuyaDataCallback<GroupBean>() {
                                         @Override
                                         public void onSuccess(GroupBean result) {
-                                            mergeGroupBean(groupPackResult, firstGroup);
-
                                             GroupBean finalGroupBean = TuyaHomeRelationCacheManager.getInstance().getGroupBean(firstGroup.getId());
                                             mGroupUseCase.openGroupPanel(activity, finalGroupBean, true);
                                         }
@@ -277,20 +276,6 @@ public class GroupListPresenter {
                         mGroupListView.toast(errorMessage);
                     }
                 });
-    }
-
-    private void mergeGroupBean(GroupPackBean groupPackResult, GroupBean groupBean) {
-        GroupBean finalGroupBean = TuyaHomeSdk.getDataInstance().getGroupBean(groupBean.getId());
-        finalGroupBean.setMasterDevId(groupBean.getMasterDevId());
-        finalGroupBean.setMasterNodeId(groupBean.getMasterNodeId());
-        if (groupPackResult != null) {
-            finalGroupBean.setGroupPackId(groupPackResult.getGroupPackageId());
-        }
-
-        ITuyaGroupPlugin iTuyaGroupPlugin = PluginManager.service(ITuyaGroupPlugin.class);
-        if (iTuyaGroupPlugin != null) {
-            iTuyaGroupPlugin.getGroupCacheInstance().addGroup(finalGroupBean);
-        }
     }
 
     public void setBundle(@Nullable Bundle bundle) {

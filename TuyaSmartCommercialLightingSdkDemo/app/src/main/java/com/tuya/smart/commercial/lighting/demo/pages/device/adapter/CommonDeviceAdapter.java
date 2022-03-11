@@ -32,6 +32,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
+import com.tuya.sdk.os.lighting.TuyaCommercialLightingDevice;
 import com.tuya.smart.android.demo.R;
 import com.tuya.smart.sdk.TuyaSdk;
 import com.tuya.smart.sdk.bean.DeviceBean;
@@ -134,7 +135,10 @@ public class CommonDeviceAdapter extends BaseAdapter {
             connect.setImageResource(resId);
             device.setText(deviceBean.getName());
 
-            if (deviceBean.getMasterGroupJoinStatus() != null && deviceBean.getMasterGroupJoinStatus() == 0) {
+            int deviceMasterGroupJoinStatus = TuyaCommercialLightingDevice.getLightingDeviceManager()
+                    .getDeviceMasterGroupJoinStatus(deviceBean.devId);
+
+            if (deviceMasterGroupJoinStatus == 0) {
                 joinStatusView.setVisibility(View.VISIBLE);
             } else {
                 joinStatusView.setVisibility(View.GONE);
