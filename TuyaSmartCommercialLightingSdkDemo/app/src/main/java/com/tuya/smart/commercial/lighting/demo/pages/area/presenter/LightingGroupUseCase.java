@@ -39,20 +39,15 @@ import com.tuya.smart.sdk.bean.GroupBean;
 
 public class LightingGroupUseCase {
     ITuyaGroupPlugin mGroupPlugin = null;
-    private final ITuyaGroupModel mGroupModel;
     private final AbsPanelCallerService mAbsPanelCallerService;
 
     public LightingGroupUseCase() {
         mGroupPlugin = PluginManager.service(ITuyaGroupPlugin.class);
-        mGroupModel = mGroupPlugin.newGroupModelInstance();
         mAbsPanelCallerService = MicroServiceManager.getInstance().findServiceByInterface(AbsPanelCallerService.class.getName());
     }
 
     public void getGroupDeviceByAreaId(long homeId, long areaId, String offsetKey, ITuyaResultCallback<AreaGroupListRespBean> callback) {
-        if (mGroupModel == null) {
-            return;
-        }
-        mGroupModel.queryGroupListByAreaId(homeId, areaId, offsetKey, callback);
+        TuyaCommercialLightingArea.newAreaInstance(homeId, areaId).queryGroupListInArea(offsetKey, callback);
     }
 
     public void getGroupPackListByAreaId(long homeId, long areaId, String offsetKey, final ITuyaResultCallback<GroupPackListBean> callback) {

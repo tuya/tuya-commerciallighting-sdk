@@ -113,7 +113,7 @@ android {
         implementation 'androidx.appcompat:appcompat:1.2.0'
         implementation "androidx.annotation:annotation:1.0.0"
 
-        implementation "com.tuya.smart:tuyacommerciallightingsdk:1.11.3"
+        implementation "com.tuya.smart:tuyacommerciallightingsdk:1.12.5"
         /*================================SDK====================================*/
 
         //UI biz bundle for device control
