@@ -19,10 +19,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/mg_16"
+            android:layout_marginTop="@dimen/thing_mg_16"
             android:gravity="center"
             android:id="@+id/tv_network_tip"
-            android:text="@string/ty_ez_init_descripton1"
+            android:text="@string/thing_ez_init_descripton1"
             android:textColor="@color/colorNormal"
             android:textSize="@dimen/ts_14" />
 
@@ -47,7 +47,7 @@
                 android:layout_height="wrap_content"
                 android:width="350dp"
                 android:gravity="start"
-                android:text="@string/ty_ez_init_descripton2"
+                android:text="@string/thing_ez_init_descripton2"
                 android:textColor="@color/edit_exit_title"
                 android:textSize="@dimen/ts_14" />
 
@@ -75,7 +75,7 @@
                 android:layout_height="wrap_content"
                 android:width="350dp"
                 android:gravity="start"
-                android:text="@string/ty_ez_init_descripton3"
+                android:text="@string/thing_ez_init_descripton3"
                 android:textColor="@color/edit_exit_title"
                 android:textSize="@dimen/ts_14" />
 
@@ -87,7 +87,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:text="@string/ty_ez_init_help"
+            android:text="@string/thing_ez_init_help"
             android:textColor="@color/colorHighlight"
             android:textSize="@dimen/ts_13" />
 
@@ -100,10 +100,10 @@
         android:layout_width="match_parent"
         android:layout_height="44dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="@dimen/mg_16"
-        android:layout_marginLeft="@dimen/mg_15"
-        android:layout_marginRight="@dimen/mg_15"
-        android:text="@string/ty_ez_init_comfirm"
+        android:layout_marginBottom="@dimen/thing_mg_16"
+        android:layout_marginLeft="@dimen/thing_mg_15"
+        android:layout_marginRight="@dimen/thing_mg_15"
+        android:text="@string/thing_ez_init_comfirm"
         android:textSize="@dimen/ts_15" />
 
 </RelativeLayout>

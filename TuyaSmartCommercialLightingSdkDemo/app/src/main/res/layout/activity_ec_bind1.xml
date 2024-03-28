@@ -29,7 +29,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:scaleType="fitXY"
-                    android:src="@drawable/ty_adddevice_ap_screen" />
+                    android:src="@drawable/thing_adddevice_ap_screen" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -45,9 +45,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/ty_ap_connect_description"
+                android:text="@string/thing_ap_connect_description"
                 android:textColor="@color/colorNormal"
-                android:layout_marginTop="@dimen/mg_16"
+                android:layout_marginTop="@dimen/thing_mg_16"
                 android:gravity="center"
                 android:textSize="@dimen/ts_14" />
 
@@ -56,7 +56,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
-                android:text="@string/ty_ap_connect_help"
+                android:text="@string/thing_ap_connect_help"
                 android:textColor="?attr/navbar_font_color"
                 android:textSize="@dimen/ts_13" />
 
@@ -69,10 +69,10 @@
             android:layout_width="match_parent"
             android:layout_height="44dp"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="@dimen/mg_16"
-            android:layout_marginLeft="@dimen/mg_15"
-            android:layout_marginRight="@dimen/mg_15"
-            android:text="@string/ty_ap_connect_go"
+            android:layout_marginBottom="@dimen/thing_mg_16"
+            android:layout_marginLeft="@dimen/thing_mg_15"
+            android:layout_marginRight="@dimen/thing_mg_15"
+            android:text="@string/thing_ap_connect_go"
             android:textSize="@dimen/ts_15"
             android:textColor="@color/white" />
 
@@ -90,7 +90,7 @@
         android:layout_marginTop="@dimen/toolbar_height"
         android:background="@color/color_d0e1fd"
         android:gravity="center"
-        android:padding="@dimen/mg_3"
+        android:padding="@dimen/thing_mg_3"
         android:text="@string/network_time_out"
         android:textColor="@color/colorDark"
         android:textSize="@dimen/ts_14"
@@ -104,7 +104,7 @@
         android:orientation="vertical"
         android:visibility="gone">
 
-        <com.tuya.smart.commercial.lighting.demo.widget.circleprogress.CircleProgressView
+        <com.thingclips.smart.commercial.lighting.demo.widget.circleprogress.CircleProgressView
             android:id="@+id/circleView"
             android:layout_width="100dp"
             android:layout_height="100dp"
@@ -135,9 +135,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="@dimen/mg_28"
+            android:layout_marginTop="@dimen/thing_mg_28"
             android:gravity="center"
-            android:text="@string/ty_ez_connecting_devicei_note1"
+            android:text="@string/thing_ez_connecting_devicei_note1"
             android:textColor="#626262"
             android:textSize="@dimen/ts_14" />
 
@@ -146,7 +146,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="@string/ty_ez_connecting_device_note2"
+            android:text="@string/thing_ez_connecting_device_note2"
             android:textColor="#626262"
             android:textSize="@dimen/ts_14" />
     </LinearLayout>
@@ -188,7 +188,7 @@
         android:layout_width="match_parent"
         android:layout_height="44dp"
         android:layout_gravity="bottom|center_horizontal"
-        android:layout_marginBottom="@dimen/mg_66"
+        android:layout_marginBottom="@dimen/thing_mg_66"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:gravity="center"
@@ -202,9 +202,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center_horizontal"
-        android:layout_marginBottom="@dimen/mg_16"
+        android:layout_marginBottom="@dimen/thing_mg_16"
         android:gravity="center"
-        android:text="@string/ty_ap_error_phone"
+        android:text="@string/thing_ap_error_phone"
         android:textColor="@color/color_626262"
         android:visibility="gone" />
 
@@ -213,11 +213,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginBottom="@dimen/mg_20"
-        android:drawablePadding="@dimen/mg_20"
-        android:drawableTop="@drawable/ty_adddevice_ok"
+        android:layout_marginBottom="@dimen/thing_mg_20"
+        android:drawablePadding="@dimen/thing_mg_20"
+        android:drawableTop="@drawable/thing_adddevice_ok"
         android:gravity="center"
-        android:text="@string/ty_ez_status_success"
+        android:text="@string/thing_ez_status_success"
         android:textColor="#61BA00"
         android:textSize="@dimen/ts_14"
         android:visibility="gone" />
@@ -229,7 +229,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="70dp"
         android:gravity="center"
-        android:text="@string/ty_config_device_init_tip"
+        android:text="@string/thing_config_device_init_tip"
         android:textColor="#ff4800"
         android:textSize="@dimen/ts_14"
         android:visibility="gone" />
@@ -257,8 +257,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="bottom"
-            android:paddingTop="@dimen/mg_24"
-            android:text="@string/ty_ap_error_description"
+            android:paddingTop="@dimen/thing_mg_24"
+            android:text="@string/thing_ap_error_description"
             android:textColor="?attr/navbar_font_color"
             android:textSize="@dimen/ts_14" />
     </LinearLayout>
@@ -268,12 +268,12 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center_horizontal"
-        android:layout_marginBottom="@dimen/mg_88"
-        android:layout_marginLeft="@dimen/mg_40"
-        android:drawableLeft="@drawable/ty_add_device_default_tip"
-        android:drawablePadding="@dimen/mg_6"
+        android:layout_marginBottom="@dimen/thing_mg_88"
+        android:layout_marginLeft="@dimen/thing_mg_40"
+        android:drawableLeft="@drawable/thing_add_device_default_tip"
+        android:drawablePadding="@dimen/thing_mg_6"
         android:gravity="start"
-        android:text="@string/ty_add_device_find_dev"
+        android:text="@string/thing_add_device_find_dev"
         android:textColor="#9B9B9B"
         android:textSize="@dimen/ts_12" />
 
@@ -282,12 +282,12 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center_horizontal"
-        android:layout_marginBottom="@dimen/mg_68"
-        android:layout_marginLeft="@dimen/mg_40"
-        android:drawableLeft="@drawable/ty_add_device_default_tip"
-        android:drawablePadding="@dimen/mg_6"
+        android:layout_marginBottom="@dimen/thing_mg_68"
+        android:layout_marginLeft="@dimen/thing_mg_40"
+        android:drawableLeft="@drawable/thing_add_device_default_tip"
+        android:drawablePadding="@dimen/thing_mg_6"
         android:gravity="start"
-        android:text="@string/ty_add_device_reg_cloud"
+        android:text="@string/thing_add_device_reg_cloud"
         android:textColor="#9B9B9B"
         android:textSize="@dimen/ts_12" />
 
@@ -296,12 +296,12 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center_horizontal"
-        android:layout_marginBottom="@dimen/mg_48"
-        android:layout_marginLeft="@dimen/mg_40"
-        android:drawableLeft="@drawable/ty_add_device_default_tip"
-        android:drawablePadding="@dimen/mg_6"
+        android:layout_marginBottom="@dimen/thing_mg_48"
+        android:layout_marginLeft="@dimen/thing_mg_40"
+        android:drawableLeft="@drawable/thing_add_device_default_tip"
+        android:drawablePadding="@dimen/thing_mg_6"
         android:gravity="start"
-        android:text="@string/ty_add_device_initialize"
+        android:text="@string/thing_add_device_initialize"
         android:textColor="#9B9B9B"
         android:textSize="@dimen/ts_12" />
 

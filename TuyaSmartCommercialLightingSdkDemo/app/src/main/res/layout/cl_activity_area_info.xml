@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.tuya.smart.commercial.lighting.demo.pages.area.view.AreaInfoActivity">
+    tools:context="com.thingclips.smart.commercial.lighting.demo.pages.area.view.AreaInfoActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,12 +19,12 @@
             android:id="@+id/area_info_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/mg_24"
+            android:layout_margin="@dimen/thing_mg_24"
             android:background="@color/white"
             android:gravity="center"
-            android:padding="@dimen/mg_24"
+            android:padding="@dimen/thing_mg_24"
             android:textColor="@color/black"
-            android:textSize="@dimen/mg_24"
+            android:textSize="@dimen/thing_mg_24"
             app:drawableEndCompat="@drawable/my_scene" />
 
         <TextView
@@ -34,13 +34,13 @@
             android:background="@color/white"
             android:gravity="center"
             android:textColor="@color/black"
-            android:textSize="@dimen/mg_16" />
+            android:textSize="@dimen/thing_mg_16" />
 
         <Button
             android:id="@+id/btn_area_control"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/mg_12"
+            android:layout_marginTop="@dimen/thing_mg_12"
             android:layout_weight="1"
             android:text="Area Control" />
 
@@ -70,7 +70,7 @@
             android:id="@+id/area_info_rv"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="@dimen/mg_60" />
+            android:layout_marginBottom="@dimen/thing_mg_60" />
 
         <Button
             android:id="@+id/area_info_create_sub"

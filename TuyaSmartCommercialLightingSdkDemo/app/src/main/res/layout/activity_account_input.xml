@@ -12,11 +12,11 @@
     <LinearLayout
         android:id="@+id/rl_country"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/mg_50"
-        android:layout_marginBottom="@dimen/mg_10"
-        android:layout_marginLeft="@dimen/mg_15"
-        android:layout_marginRight="@dimen/mg_15"
-        android:layout_marginTop="@dimen/mg_20"
+        android:layout_height="@dimen/thing_mg_50"
+        android:layout_marginBottom="@dimen/thing_mg_10"
+        android:layout_marginLeft="@dimen/thing_mg_15"
+        android:layout_marginRight="@dimen/thing_mg_15"
+        android:layout_marginTop="@dimen/thing_mg_20"
         android:layout_below="@id/action_bar_layout"
         android:orientation="horizontal"
         android:background="@drawable/bg_white_round">
@@ -25,7 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center|left"
-            android:padding="@dimen/mg_15"
+            android:padding="@dimen/thing_mg_15"
             android:text="@string/login_choose_country"
             android:textColor="@color/text_color"
             android:textSize="@dimen/ts_15" />
@@ -34,12 +34,12 @@
             android:id="@+id/country_name"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:drawablePadding="@dimen/mg_10"
+            android:drawablePadding="@dimen/thing_mg_10"
             android:drawableRight="@drawable/arrow_more"
             android:gravity="center_vertical|right"
             android:singleLine="true"
             android:ellipsize="marquee"
-            android:paddingRight="@dimen/mg_15"
+            android:paddingRight="@dimen/thing_mg_15"
             android:textColor="@color/text_color"
             android:textSize="@dimen/ts_15" />
 

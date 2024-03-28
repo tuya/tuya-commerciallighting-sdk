@@ -7,15 +7,15 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="64dp"
-        android:layout_marginTop="@dimen/mg_10"
+        android:layout_marginTop="@dimen/thing_mg_10"
         android:background="@color/white">
 
         <TextView
             android:id="@+id/tv_dp_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/mg_37"
-            android:layout_marginTop="@dimen/mg_16"
+            android:layout_marginLeft="@dimen/thing_mg_37"
+            android:layout_marginTop="@dimen/thing_mg_16"
             android:textColor="@color/color_303030"
             android:textSize="@dimen/ts_16" />
 
@@ -23,8 +23,8 @@
             android:id="@+id/tv_dp_number"
             android:layout_width="16dp"
             android:layout_height="16dp"
-            android:layout_marginLeft="@dimen/mg_17"
-            android:layout_marginTop="@dimen/mg_19"
+            android:layout_marginLeft="@dimen/thing_mg_17"
+            android:layout_marginTop="@dimen/thing_mg_19"
             android:background="@drawable/bg_circle"
             android:gravity="center"
             android:textColor="@color/white"
@@ -34,8 +34,8 @@
             android:id="@+id/tv_dp_property"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/mg_15"
-            android:layout_marginTop="@dimen/mg_38"
+            android:layout_marginLeft="@dimen/thing_mg_15"
+            android:layout_marginTop="@dimen/thing_mg_38"
             android:text="数值型|可下发可上报"
             android:textColor="#9b9b9b"
             android:textSize="@dimen/ts_10" />
@@ -69,7 +69,7 @@
             android:layout_width="34dp"
             android:layout_height="34dp"
             android:layout_gravity="right|center_vertical"
-            android:layout_marginRight="@dimen/mg_14"
+            android:layout_marginRight="@dimen/thing_mg_14"
             android:background="@color/color_ff5800"
             android:gravity="center"
             android:text=">"
@@ -82,12 +82,12 @@
             android:layout_width="150dp"
             android:layout_height="34dp"
             android:layout_gravity="right|center_vertical"
-            android:layout_marginRight="@dimen/mg_15"
+            android:layout_marginRight="@dimen/thing_mg_15"
             android:background="@drawable/bg_line"
             android:gravity="left|center_vertical"
-            android:paddingBottom="@dimen/mg_8"
-            android:paddingLeft="@dimen/mg_10"
-            android:paddingTop="@dimen/mg_8"
+            android:paddingBottom="@dimen/thing_mg_8"
+            android:paddingLeft="@dimen/thing_mg_10"
+            android:paddingTop="@dimen/thing_mg_8"
             android:textColor="@color/color_303030"
             android:textSize="@dimen/ts_14"></TextView>
 
@@ -96,7 +96,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right|center_vertical"
-            android:layout_marginRight="@dimen/mg_24"
+            android:layout_marginRight="@dimen/thing_mg_24"
             android:background="@drawable/more" />
 
         <TextView
@@ -126,9 +126,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right|center_vertical"
-            android:layout_marginLeft="@dimen/mg_2"
-            android:layout_marginRight="@dimen/mg_5"
-            android:padding="@dimen/mg_20"
+            android:layout_marginLeft="@dimen/thing_mg_2"
+            android:layout_marginRight="@dimen/thing_mg_5"
+            android:padding="@dimen/thing_mg_20"
             android:src="@drawable/add"
             android:visibility="gone" />
 
@@ -137,9 +137,9 @@
             android:layout_width="1dp"
             android:layout_height="match_parent"
             android:layout_gravity="right|center_vertical"
-            android:layout_marginBottom="@dimen/mg_14"
-            android:layout_marginRight="@dimen/mg_62"
-            android:layout_marginTop="@dimen/mg_14"
+            android:layout_marginBottom="@dimen/thing_mg_14"
+            android:layout_marginRight="@dimen/thing_mg_62"
+            android:layout_marginTop="@dimen/thing_mg_14"
             android:background="@color/color_dddddd"
             android:visibility="gone" />
 
@@ -148,9 +148,9 @@
             android:layout_width="1dp"
             android:layout_height="match_parent"
             android:layout_gravity="right|center_vertical"
-            android:layout_marginBottom="@dimen/mg_14"
-            android:layout_marginRight="@dimen/mg_120"
-            android:layout_marginTop="@dimen/mg_14"
+            android:layout_marginBottom="@dimen/thing_mg_14"
+            android:layout_marginRight="@dimen/thing_mg_120"
+            android:layout_marginTop="@dimen/thing_mg_14"
             android:background="@color/color_dddddd"
             android:visibility="gone" />
 
@@ -161,7 +161,7 @@
             android:layout_gravity="right|center_vertical"
             android:layout_marginRight="124dp"
             android:src="@drawable/sub"
-            android:padding="@dimen/mg_20"
+            android:padding="@dimen/thing_mg_20"
             android:visibility="gone" />
     </FrameLayout>
 

@@ -11,7 +11,7 @@
 
     <ListView
         android:id="@+id/lv_dp_list"
-        style="@style/TY_List_Normal"
+        style="@style/THING_List_Normal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"></ListView>
 

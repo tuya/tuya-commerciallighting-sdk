@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_marginLeft="10dp"
-        android:src="@drawable/ty_devicelist_dot_gray" />
+        android:src="@drawable/thing_devicelist_dot_gray" />
 
     <ImageView
         android:id="@+id/iv_device_icon"
@@ -21,14 +21,14 @@
         android:layout_centerVertical="true"
         android:layout_toRightOf="@+id/iv_device_list_dot"
         android:scaleType="fitXY"
-        android:src="@drawable/ty_device_cz02" />
+        android:src="@drawable/thing_device_cz02" />
 
     <TextView
         android:id="@+id/tv_device"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_marginRight="@dimen/mg_10"
+        android:layout_marginRight="@dimen/thing_mg_10"
         android:layout_toRightOf="@+id/iv_device_icon"
         android:ellipsize="end"
         android:gravity="start"
@@ -41,10 +41,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/red"
-        android:textSize="@dimen/mg_20"
+        android:textSize="@dimen/thing_mg_20"
         android:gravity="center_horizontal"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="@dimen/mg_10" />
+        android:layout_marginBottom="@dimen/thing_mg_10" />
 
     <ImageView
         android:layout_width="wrap_content"

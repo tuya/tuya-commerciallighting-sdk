@@ -5,8 +5,8 @@
     android:layout_height="@dimen/wh_60"
     android:layout_marginTop="@dimen/wh_20"
     android:background="@color/white"
-    android:paddingLeft="@dimen/mg_15"
-    android:paddingRight="@dimen/mg_15">
+    android:paddingLeft="@dimen/thing_mg_15"
+    android:paddingRight="@dimen/thing_mg_15">
 
     <TextView
         android:id="@+id/project_index_add_txt"
@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_gravity="center_vertical"
-        android:text="@string/ty_change_login_keyword"
+        android:text="@string/thing_change_login_keyword"
         android:textColor="?attr/list_primary_color"
         android:textSize="@dimen/ts_20" />
 

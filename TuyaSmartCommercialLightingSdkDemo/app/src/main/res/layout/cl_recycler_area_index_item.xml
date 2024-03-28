@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="@dimen/mg_8"
+    android:layout_marginTop="@dimen/thing_mg_8"
     android:background="@color/white"
-    android:padding="@dimen/mg_16">
+    android:padding="@dimen/thing_mg_16">
 
     <TextView
         android:id="@+id/recycler_area_item_name"

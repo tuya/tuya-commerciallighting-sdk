@@ -10,17 +10,17 @@
 
     <com.facebook.drawee.view.SimpleDraweeView
         android:id="@+id/project_type_icon"
-        android:layout_width="@dimen/mg_100"
-        android:layout_height="@dimen/mg_100"
+        android:layout_width="@dimen/thing_mg_100"
+        android:layout_height="@dimen/thing_mg_100"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="@dimen/mg_10"
+        android:layout_marginTop="@dimen/thing_mg_10"
         android:scaleType="center" />
 
     <TextView
         android:id="@+id/project_type_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginVertical="@dimen/mg_10"
+        android:layout_marginVertical="@dimen/thing_mg_10"
         android:gravity="center"
         android:textColor="@color/primary_button_bg_color"
         android:textSize="@dimen/ts_16" />

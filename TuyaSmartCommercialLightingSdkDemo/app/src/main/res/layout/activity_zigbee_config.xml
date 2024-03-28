@@ -13,7 +13,7 @@
         android:id="@+id/btn_wired_zigbee"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="@dimen/mg_10"
+        android:layout_marginTop="@dimen/thing_mg_10"
         android:text="有线网关配网" />
 
     <Button

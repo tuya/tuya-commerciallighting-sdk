@@ -1,26 +1,33 @@
 apply plugin: 'com.android.application'
 
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
-
+def debugStore = [
+        debugStoreFilePath: "",
+        debugStorePassword: "",
+        debugKeyAlias     : "",
+        debugKeyPassword  : ""
+]
 
 android {
     signingConfigs {
         debug {
-            storeFile file('')
-            storePassword ''
-            keyAlias ''
-            keyPassword ''
+            storeFile file(debugStore.debugStoreFilePath)
+            storePassword debugStore.debugStorePassword
+            keyAlias debugStore.debugKeyAlias
+            keyPassword debugStore.debugKeyPassword
+            v1SigningEnabled true
+            v2SigningEnabled true
         }
+
     }
-    compileSdkVersion 29
-    buildToolsVersion "28.0.3"
+
+    compileSdk 33
+
     defaultConfig {
         applicationId ""
-        minSdkVersion 19
-        targetSdkVersion 29
+        minSdkVersion 23
+        targetSdkVersion 33
         versionCode 1
-        versionName "1.9.5"
+        versionName "2.8.1"
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
         multiDexEnabled true
         ndk {
@@ -31,29 +38,7 @@ android {
 
         Properties properties = new Properties()
         properties.load(project.rootProject.file('local.properties').newDataInputStream())
-        manifestPlaceholders = [TUYA_SMART_APPKEY: "${properties.getProperty("appkey")}", TUYA_SMART_SECRET: "${properties.getProperty("appSecret")}"]
-
-        if (properties.getProperty("API_URL")) {
-            buildConfigField "String", "API_URL", "${properties.getProperty("API_URL")}"
-        }
-        if (properties.getProperty("LOG_URL")) {
-            buildConfigField "String", "LOG_URL", "${properties.getProperty("LOG_URL")}"
-        }
-        if (properties.getProperty("MQTT_URL")) {
-            buildConfigField "String", "MQTT_URL", "${properties.getProperty("MQTT_URL")}"
-        }
-        if (properties.getProperty("GW_API_URL")) {
-            buildConfigField "String", "GW_API_URL", "${properties.getProperty("GW_API_URL")}"
-        }
-        if (properties.getProperty("GW_MQTT_URL")) {
-            buildConfigField "String", "GW_MQTT_URL", "${properties.getProperty("GW_MQTT_URL")}"
-        }
-        if (properties.getProperty("MEDIA_MQTT_URL")) {
-            buildConfigField "String", "MEDIA_MQTT_URL", "${properties.getProperty("MEDIA_MQTT_URL")}"
-        }
-        if (properties.getProperty("REGION")) {
-            buildConfigField "String", "REGION", "${properties.getProperty("REGION")}"
-        }
+        manifestPlaceholders = [THING_SMART_APPKEY: "${properties.getProperty("appkey")}", THING_SMART_SECRET: "${properties.getProperty("appSecret")}"]
     }
 
     buildTypes {
@@ -75,25 +60,10 @@ android {
         checkReleaseBuilds false
     }
 
-    repositories {
-        flatDir {
-            dirs 'libs'
-        }
-    }
     packagingOptions {
-        exclude 'META-INF/LICENSE.txt'
-        exclude 'META-INF/NOTICE'
-        exclude 'META-INF/LICENSE'
-        exclude 'META-INF/NOTICE.txt'
-        exclude 'META-INF/INDEX.LIST'
-        exclude 'META-INF/maven/com.squareup.okio/okio/pom.properties'
-        exclude 'META-INF/maven/com.squareup.okio/okio/pom.xml'
-        exclude 'META-INF/android-offlinelog-api_release.kotlin_module'
-        exclude 'META-INF/android-offlinelog-upload_release.kotlin_module'
+        pickFirst 'lib/*/libv8android.so'
+        pickFirst 'lib/*/libv8wrapper.so'
         pickFirst 'lib/*/libc++_shared.so'
-        pickFirst 'lib/*/libgnustl_shared.so'
-        doNotStrip '*/mips/*.so'
-        doNotStrip '*/mips64/*.so'
     }
 
 
@@ -108,30 +78,6 @@ android {
         implementation 'com.alibaba:fastjson:1.1.67.android'
         implementation 'com.squareup.okhttp3:okhttp-urlconnection:3.14.9'
 
-        /*================================SDK====================================*/
-        implementation 'com.facebook.soloader:soloader:0.8.0'
-        implementation 'androidx.appcompat:appcompat:1.2.0'
-        implementation "androidx.annotation:annotation:1.0.0"
-
-        implementation "com.tuya.smart:tuyacommerciallightingsdk:1.12.5"
-        /*================================SDK====================================*/
-
-        //UI biz bundle for device control
-        implementation 'com.tuya.smart:tuyasmart-commercial-lighting-bizbundle-panel:1.11.3-5'
-
-        api 'com.tuya.smart:tuyasmart-react-native-amap:3.27.5'
-        implementation 'com.amap.api:search:7.7.0'
-        implementation 'com.amap.api:3dmap:7.8.0'
-
-        // UI biz bundle for device activation
-        implementation 'com.tuya.smart:tuyasmart-commercial-lighting-bizbundle-device_activator:1.11.3-5'
-
-        implementation "com.tuya.smart:tuyasmart-base-constant:3.21.0-rc.1"
-
-        implementation 'com.tuya.smart:tuyasmart-shortcutparser:0.0.1'
-        implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.0.0'
-        //***** required ****//
-
         //***** not required ****//
         implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.0.0'
         implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
@@ -144,18 +90,28 @@ android {
         implementation 'com.squareup.picasso:picasso:2.5.2'
         implementation 'com.readystatesoftware.systembartint:systembartint:1.0.3'
 
-        implementation 'com.facebook.fresco:fresco:1.3.0'
+        implementation 'com.facebook.fresco:fresco:2.6.0'
         implementation 'com.google.android:flexbox:1.1.1'
-
-        // For QRCode Login
-        implementation 'com.google.zxing:core:3.3.3'
 
         //***** not required ****//
         implementation 'androidx.multidex:multidex:2.0.1'
 
-        implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.31'
-        implementation 'org.jetbrains.kotlin:kotlin-reflect:1.2.61'
-        implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.4'
-        implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.4'
+        implementation 'com.thingclips.smart:thingsmart-shortcutparser:5.0.0-rc.1'
+
+        /*================================SDK====================================*/
+        implementation 'com.facebook.soloader:soloader:0.10.4'
+        implementation 'androidx.appcompat:appcompat:1.2.0'
+        implementation "androidx.annotation:annotation:1.0.0"
+
+        implementation 'com.thingclips.smart:thingcommerciallightingsdk:2.8.1'
+
+        api enforcedPlatform("com.thingclips.smart:thingsmart-BizBundlesBom:2.8.0-bizbundle-lamp-2.8.0.27")
+        api ("com.thingclips.smart:thingsmart-bizbundle-lamp_device_activator")
+        api ("com.thingclips.smart:thingsmart-bizbundle-lamp_panel")
     }
+}
+
+configurations.all {
+    exclude group: 'com.thingclips.smart.rnplugin', module: 'trctrtspmediaplayermanager'
+    exclude group: 'com.thingclips.smart.rnplugin', module: 'trctrtspmediamanager'
 }

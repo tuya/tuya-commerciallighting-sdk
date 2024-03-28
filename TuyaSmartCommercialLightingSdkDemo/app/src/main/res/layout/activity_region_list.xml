@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.tuya.smart.commercial.lighting.demo.pages.project.view.RegionListActivity">
+    tools:context="com.thingclips.smart.commercial.lighting.demo.pages.project.view.RegionListActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_region_list"
@@ -14,7 +14,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_country_list"
         android:layout_width="match_parent"
-        android:layout_marginTop="@dimen/mg_16"
+        android:layout_marginTop="@dimen/thing_mg_16"
         android:layout_height="match_parent" />
 
 </LinearLayout>

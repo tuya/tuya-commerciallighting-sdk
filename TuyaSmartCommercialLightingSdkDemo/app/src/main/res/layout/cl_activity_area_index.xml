@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.tuya.smart.commercial.lighting.demo.pages.area.view.AreaIndexActivity">
+    tools:context="com.thingclips.smart.commercial.lighting.demo.pages.area.view.AreaIndexActivity">
 
     <include
         android:id="@+id/action_bar_layout"
@@ -14,7 +14,7 @@
         android:id="@+id/btn_create_area"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/mg_16"
+        android:layout_margin="@dimen/thing_mg_16"
         android:text="@string/cl_area_add_new_area" />
 
     <LinearLayout
@@ -27,7 +27,7 @@
             style="@style/TextAppearance.AppCompat.Button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/mg_16"
+            android:layout_margin="@dimen/thing_mg_16"
             android:layout_weight="1"
             android:checked="true"
             android:text="@string/cl_area_index_list"
@@ -38,7 +38,7 @@
             style="@style/TextAppearance.AppCompat.Button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/mg_16"
+            android:layout_margin="@dimen/thing_mg_16"
             android:layout_weight="1"
             android:checked="true"
             android:text="@string/cl_area_index_level_list"

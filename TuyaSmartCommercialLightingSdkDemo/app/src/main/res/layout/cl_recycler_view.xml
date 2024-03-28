@@ -11,7 +11,7 @@
 
     <include
         android:id="@+id/emptyView"
-        layout="@layout/ty_data_empty"
+        layout="@layout/thing_data_empty"
         android:visibility="gone"
         tools:visibility="visible" />
 

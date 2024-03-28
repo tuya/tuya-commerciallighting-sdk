@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/action_bar_layout"
-        android:layout_marginBottom="@dimen/mg_60" />
+        android:layout_marginBottom="@dimen/thing_mg_60" />
 
     <TextView
         android:id="@+id/project_info_remove"

@@ -15,7 +15,7 @@
         android:layout_below="@id/action_bar_layout"
         android:background="#33FFD000"
         android:gravity="center"
-        android:padding="@dimen/mg_5"
+        android:padding="@dimen/thing_mg_5"
         android:text="@string/ez_notSupport_5G"
         android:textColor="?attr/navbar_font_color"
         android:textSize="@dimen/ts_14"
@@ -24,8 +24,8 @@
 
     <ImageView
         android:id="@+id/iv_wifi"
-        android:layout_width="@dimen/mg_100"
-        android:layout_height="@dimen/mg_100"
+        android:layout_width="@dimen/thing_mg_100"
+        android:layout_height="@dimen/thing_mg_100"
         android:layout_below="@id/action_bar_layout"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="86dp"
@@ -39,13 +39,13 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/iv_wifi"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/mg_24">
+        android:layout_marginTop="@dimen/thing_mg_24">
 
         <TextView
             android:id="@+id/tv_wifi_status"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/ty_ez_current_no_wifi"
+            android:text="@string/thing_ez_current_no_wifi"
             android:textColor="#626262"
             android:textSize="@dimen/ts_14" />
 
@@ -53,8 +53,8 @@
             android:id="@+id/tv_network"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/mg_5"
-            android:layout_marginStart="@dimen/mg_5"
+            android:layout_marginLeft="@dimen/thing_mg_5"
+            android:layout_marginStart="@dimen/thing_mg_5"
             android:textColor="#000000"
             android:textSize="@dimen/ts_14" />
     </LinearLayout>
@@ -67,7 +67,7 @@
         android:layout_below="@+id/ll_wifi_status"
         android:layout_centerHorizontal="true"
         android:padding="8dp"
-        android:text="@string/ty_ez_other_wifi"
+        android:text="@string/thing_ez_other_wifi"
         android:textColor="?attr/navbar_font_color"
         android:textSize="@dimen/ts_14" />
 
@@ -77,8 +77,8 @@
         android:layout_width="match_parent"
         android:layout_height="44dp"
         android:layout_below="@+id/tv_other_wifi"
-        android:layout_marginLeft="@dimen/mg_15"
-        android:layout_marginRight="@dimen/mg_15"
+        android:layout_marginLeft="@dimen/thing_mg_15"
+        android:layout_marginRight="@dimen/thing_mg_15"
         android:layout_marginTop="56dp"
         android:background="@drawable/bg_textview">
 
@@ -88,19 +88,19 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="@dimen/mg_16"
-            android:background="@drawable/ty_adddevice_password_icon" />
+            android:layout_marginLeft="@dimen/thing_mg_16"
+            android:background="@drawable/thing_adddevice_password_icon" />
 
         <EditText
             android:id="@+id/et_password"
             style="@style/edit_text_input"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="@dimen/mg_16"
+            android:layout_marginLeft="@dimen/thing_mg_16"
             android:layout_toLeftOf="@+id/ec_password_switch"
             android:layout_toRightOf="@+id/iv_password"
             android:hint="@string/please_input_wifi_password"
             android:imeOptions="actionDone"
-            android:text=""
+            android:text="Thing.140616"
             android:textColorHint="#9b9b9b"
             android:textSize="15sp" />
 
@@ -110,12 +110,12 @@
             android:layout_height="40dp"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginRight="@dimen/mg_5"
+            android:layout_marginRight="@dimen/thing_mg_5"
             android:background="@color/white"
-            android:paddingLeft="@dimen/mg_5"
-            android:paddingRight="@dimen/mg_5"
+            android:paddingLeft="@dimen/thing_mg_5"
+            android:paddingRight="@dimen/thing_mg_5"
             android:scaleType="centerInside"
-            android:src="@drawable/ty_password_on" />
+            android:src="@drawable/thing_password_on" />
     </RelativeLayout>
 
 
@@ -125,9 +125,9 @@
         android:layout_width="match_parent"
         android:layout_height="44dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="@dimen/mg_15"
-        android:layout_marginLeft="@dimen/mg_15"
-        android:layout_marginRight="@dimen/mg_15"
+        android:layout_marginBottom="@dimen/thing_mg_15"
+        android:layout_marginLeft="@dimen/thing_mg_15"
+        android:layout_marginRight="@dimen/thing_mg_15"
         android:text="@string/go_next"
         android:textSize="@dimen/ts_15" />
 </RelativeLayout>

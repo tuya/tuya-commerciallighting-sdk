@@ -15,7 +15,7 @@
         android:layout_below="@id/action_bar_layout"
         android:background="?attr/notice_bg_color"
         android:gravity="center"
-        android:padding="@dimen/mg_3"
+        android:padding="@dimen/thing_mg_3"
         android:text="@string/network_time_out"
         android:textColor="?attr/notice_font_color"
         android:textSize="@dimen/ts_14"
@@ -57,7 +57,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:src="@drawable/ty_nolist_logo" />
+            android:src="@drawable/thing_nolist_logo" />
 
         <TextView
             android:id="@+id/tv_none_content"
@@ -67,7 +67,7 @@
             android:layout_centerInParent="true"
             android:layout_marginTop="6dp"
             android:gravity="center"
-            android:text="@string/ty_no_data"
+            android:text="@string/thing_no_data"
             android:textColor="@color/text_color2"
             android:textSize="@dimen/ts_16" />
 

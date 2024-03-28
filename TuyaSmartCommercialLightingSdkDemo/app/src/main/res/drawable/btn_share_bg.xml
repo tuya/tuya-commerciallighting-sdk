@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <corners android:radius="@dimen/mg_2" />
+    <corners android:radius="@dimen/thing_mg_2" />
     <solid android:color="@color/background_home" />
 
     <stroke

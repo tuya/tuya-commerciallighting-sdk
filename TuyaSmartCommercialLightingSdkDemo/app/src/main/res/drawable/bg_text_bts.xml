@@ -3,35 +3,35 @@
 
     <item android:state_focused="true">
         <shape android:shape="rectangle">
-            <corners android:radius="@dimen/mg_2" />
+            <corners android:radius="@dimen/thing_mg_2" />
 
             <solid android:color="@color/color_CC4600" />
         </shape>
     </item>
     <item android:state_selected="true">
         <shape android:shape="rectangle">
-            <corners android:radius="@dimen/mg_2" />
+            <corners android:radius="@dimen/thing_mg_2" />
 
             <solid android:color="@color/color_CC4600" />
         </shape>
     </item>
     <item android:state_pressed="true">
         <shape android:shape="rectangle">
-            <corners android:radius="@dimen/mg_2" />
+            <corners android:radius="@dimen/thing_mg_2" />
 
             <solid android:color="@color/color_CC4600" />
         </shape>
     </item>
     <item android:state_enabled="true">
         <shape android:shape="rectangle">
-            <corners android:radius="@dimen/mg_2" />
+            <corners android:radius="@dimen/thing_mg_2" />
 
             <solid android:color="#ff5800" />
         </shape>
     </item>
     <item android:state_enabled="false">
         <shape>
-            <corners android:radius="@dimen/mg_2" />
+            <corners android:radius="@dimen/thing_mg_2" />
 
             <solid android:color="@color/color_bdbdbd" />
         </shape>
